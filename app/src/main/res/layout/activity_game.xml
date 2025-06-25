@@ -57,7 +57,7 @@
         android:id="@+id/gameArea"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#DDDDDD"
+        android:background="@drawable/forest_bg"
         app:layout_constraintTop_toBottomOf="@id/roundText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

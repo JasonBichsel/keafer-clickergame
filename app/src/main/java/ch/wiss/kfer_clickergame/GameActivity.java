@@ -75,7 +75,7 @@ public class GameActivity extends AppCompatActivity {
 
         final TextView kafer = new TextView(this);
         kafer.setText("🐞");
-        kafer.setTextSize(20);
+        kafer.setTextSize(40);
         kafer.setGravity(Gravity.CENTER);
 
         FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(150, 150);
