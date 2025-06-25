@@ -1,6 +1,6 @@
 package ch.wiss.kfer_clickergame;
 
-import android.graphics.Color;
+
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -110,7 +110,7 @@ public class GameActivity extends AppCompatActivity {
     private void roundSuccess() {
         roundRunning = false;
         roundTimer.cancel();
-        ScoreManager.saveHighScore(this, score, playerName);
+        ScoreManager.addNewHighScore(this, new HighScore(playerName, score));
         Toast.makeText(this, "Runde geschafft!", Toast.LENGTH_SHORT).show();
         round++;
         handler.postDelayed(this::startNewRound, 2000);
@@ -126,7 +126,7 @@ public class GameActivity extends AppCompatActivity {
         roundRunning = false;
         handler.removeCallbacksAndMessages(null);
         roundTimer.cancel();
-        ScoreManager.saveHighScore(this, score, playerName);
+        ScoreManager.addNewHighScore(this, new HighScore(playerName, score));
         Toast.makeText(this, "Game Over! Punkte: " + score, Toast.LENGTH_LONG).show();
         finish();
     }
